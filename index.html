@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title</title>
+    <style>
+         *{padding: 0;margin: 0;}
+        ul,ol{list-style: none;}
+        a{text-decoration: none;color: #666;}
+        img{display: block;}
+        h1,h2,h3,h4,h5,h6{font-size: 16px;font-weight: normal;}
+
+        .l{float: left;}
+        .r{float: right;}
+        .clear:after{content: '';display: block;clear: both;}
+
+        #box{width: 100%;height: 800px;/*  background: url("./img/2.jpg") no-repeat center; */overflow: hidden;position: relative;}
+        #box .img{width: 100%;height: 100%;} 
+        #box .box1{width: 100%;height: 100%;}       
+        #box .box1 img:nth-of-type(1){width: 500px;height: 500px; position: absolute;left: 50%;top: 50%;margin: -250px  0 0 -250px;z-index: 2;}
+        #box .box1 img:nth-of-type(2){position: absolute;left: 0;top: 0;}
+        #box .box1 img:nth-of-type(3){width: 400px;height: 200px; position: absolute;left: 30%;top: 0;}
+        #box .box1 img:nth-of-type(4){width: 400px;height: 400px;position: absolute;left: 550px;bottom: 2%;z-index: 1;}
+        #box .pox{width: 400px;height: 400px;position: absolute;left: 50%;top: 50%;margin: -200px  0 0 -200px;z-index: 3;}
+        #box .pox .box2{width: 100%;height: 100%;}
+        #box .pox li{animation: move4 20s infinite linear;}
+        @keyframes move4 {
+            0%{transform: rotate(360deg);}
+            100%{transform: rotate(0);}
+            
+        }
+        #box .pox li img{width: 100px;height: 100px;}
+        #box .pox .box2 li:nth-of-type(1){position: absolute;left: 0;top: 0;}
+        #box .pox .box2 li:nth-of-type(2){position: absolute;left: 300px;top: 0;}
+        #box .pox .box2 li:nth-of-type(3){position: absolute;left: 300px;top: 300px;}
+        #box .pox .box2 li:nth-of-type(4){position: absolute;left: 0;top: 300px;}
+        #box .pox .box3 li:nth-of-type(1){position: absolute;left: 0;top: 0;}
+        #box .pox .box3 li:nth-of-type(2){position: absolute;left: 300px;top: 0;}
+        #box .pox .box3 li:nth-of-type(3){position: absolute;left: 300px;top: 300px;}
+        #box .pox .box3 li:nth-of-type(4){position: absolute;left: 0;top: 300px;}
+        #box .pox .box2{transform: rotateZ(45deg);}
+
+        #box .pox li img{animation: move1 20s infinite linear;}
+        @keyframes move1 {
+            0%{transform: rotate(-45deg);}
+            100%{transform: rotate(45deg);}
+            
+        }
+
+        #box .pox{animation: move2 20s infinite linear;}
+        @keyframes move2 {
+            0%{transform: rotate(0);}
+            100%{transform: rotate(360deg);}
+            
+        }
+
+        #box .box1 img:nth-of-type(1){animation: move3 20s infinite linear;}
+        @keyframes move3 {
+            0%{transform: rotate(0);}
+            100%{transform: rotate(360deg);}
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img class="img" src="./img/2.jpg" alt="">
+        <div class="box1">
+            <img src="./img/fsw.png" alt="">
+            <img src="./img/arrow.png" alt="">
+            <img src="./img/big-title.png" alt="">
+            <img src="./img/bracket.png" alt="">
+        </div>
+            <div class="pox">
+            <ul class="box2">
+                <li><img src="./img/boy.png" alt=""></li>
+                <li><img src="./img/boy.png" alt=""></li>
+                <li><img src="./img/dog.png" alt=""></li>
+                <li><img src="./img/girl.png" alt=""></li>
+            </ul>
+            <ol class="box3">
+                <li><img src="./img/girls.png" alt=""></li>
+                <li><img src="./img/hairboy.png" alt=""></li>
+                <li><img src="./img/mimi.png" alt=""></li>
+                <li><img src="./img/mudog.png" alt=""></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
